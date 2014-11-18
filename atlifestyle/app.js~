@@ -7,7 +7,7 @@
     
     $http.get('http://manasgirdhar-001-site1.mywindowshosting.com/api/search').success(function(data){
       auto.items = data;
-      alert(auto.items)
+      //alert(auto.items)
       // console.log(data);
     });
     var limitStep = 2;
