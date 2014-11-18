@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link href="bootstrap/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/normalize.min.css" />
+<link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css" />
+<link rel="stylesheet" href="css/ion.rangeSlider.css" />
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+<title>AutoLifeStyle</title>
+</head>
+
+<body>
+<!--header-->
+<div class="page-header no-margin visible-lg">
+	<div class="container">
+		<img src="autotrader.png" class="img-responsive" style="height:100px">
+	</div>
+</div>
+<!--end of header-->
+<!--naviagtions-->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#auto_nav_options">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AutoLifeStyle</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="auto_nav_options">
+      <ul class="nav navbar-nav">
+      	<li><a href="auto_index.html">Home</a></li>
+        <li><a href="auto.html">Smart Search</a></li>
+        <li  class="active"><a href="auto_questions.html">Questions</a></li>
+       
+      </ul>
+      <!--<form class="navbar-form navbar-left pull-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Keyword eg Color Model">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- end of navigation-->
+<!--body where the first set of questions are -->
+<div class="container">
+	<div class="row">
+		<div class="col col-lg-6 col-sm-12 col-md-12">
+        	<div class="panel panel-primary">
+  				<div class="panel-heading">What will you use it for </div>
+  					<div class="panel-body">
+                    
+                    	<div class="col-xs-6 col-md-3 col-lg-3">
+    <a  class="thumbnail" onClick="onClickImageRadio('using_radio','using_for_dunno','using_img')" name="using_img">
+    
+ 								<img src="auto_icons/dunno_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Clueless</div>
+								<input type="radio" name="using_radio" id="using_for_dunno" class="auto-hidden-forms" value="dunno">
+  	
+    </a>
+                        </div>
+                        
+    					<div class="col-xs-6 col-md-3 col-lg-3">
+    <a  class="thumbnail" onClick="onClickImageRadio('using_radio','using_for_roadtrip','using_img')" name="using_img">
+    
+ 								<img src="auto_icons/roadtrip_icon.png" width="50" height="50">
+								<div align="center" class="caption">Roadtrip</div>
+                                <input type="radio" name="using_radio" id="using_for_roadtrip" class="auto-hidden-forms" value="roadtrip">
+  	
+    </a>
+                        </div>
+                        
+                        <div class="col-xs-6 col-md-3 col-lg-3">
+    <a  class="thumbnail" onClick="onClickImageRadio('using_radio','using_for_business','using_img')" name="using_img">
+    
+ 								<img src="auto_icons/business_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Official</div>
+								<input type="radio" name="using_radio" id="using_for_business" class="auto-hidden-forms" value="business">
+  	
+    </a>
+                        </div>
+                        
+                        <div class="col-xs-6 col-md-3 col-lg-3">
+    <a  class="thumbnail" onClick="onClickImageRadio('using_radio','using_for_car_race','using_img')" name="using_img">
+    
+ 								<img src="auto_icons/car_race_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Race</div>
+								<input type="radio" name="using_radio" id="using_for_car_race" class="auto-hidden-forms" value="car_race">
+  	
+    </a>
+                        </div>
+                        
+                        
+  					</div><!--end of panel body-->
+				</div><!--end of panel-->
+        </div><!--end of column-->
+        <div class="col col-lg-6 col-sm-12 col-md-12">
+        	<div class="panel panel-primary">
+  				<div class="panel-heading">What size do you prefer </div>
+  					<div class="panel-body">
+    					<div class="col-xs-6 col-md-3 col-lg-3">
+    <a class="thumbnail" onClick="onClickImageRadio('size_radio','size_dunno','size_img')" name="size_img">
+    
+ 								<img src="auto_icons/dunno_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Clueless</div>
+								<input type="radio" name="size_radio" id="size_dunno" class="auto-hidden-forms" value="dunno">
+  	
+    </a>
+                        </div>
+                        
+    					<div class="col-xs-6 col-md-3 col-lg-3">
+    <a  class="thumbnail" onClick="onClickImageRadio('size_radio','size_small','size_img')" name="size_img">
+    
+ 								<img src="auto_icons/small_car_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Cute</div>
+								<input type="radio" name="size_radio" id="size_small" class="auto-hidden-forms" value="small">
+  	
+    </a>
+                        </div>
+                        
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+    <a  class="thumbnail" onClick="onClickImageRadio('size_radio','size_big','size_img')" name="size_img">
+    
+ 								<img src="auto_icons/big_car_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Big</div>
+								<input type="radio" name="size_radio" id="size_big" class="auto-hidden-forms" value="big">
+  	
+    </a>
+                        </div>
+                        
+                        <div class="col-xs-6 col-md-3 col-lg-3">
+    <a class="thumbnail" onClick="onClickImageRadio('size_radio','size_bigger','size_img')" name="size_img">
+    
+ 								<img src="auto_icons/bigger_car_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Bigger</div>
+								<input type="radio" name="size_radio" id="size_bigger" class="auto-hidden-forms" value="bigger">
+  	
+    </a>
+                        </div>
+  					</div><!--end of panel body-->
+				</div><!--end of panel-->
+        </div><!--end of column-->
+	</div><!--end of row-->
+    
+    	<div class="row">
+		<div class="col col-lg-6 col-sm-12 col-md-12">
+        	<div class="panel panel-primary">
+  				<div class="panel-heading"> Transmission </div>
+  					<div class="panel-body">
+    					<div class="col-xs-6 col-md-4 col-lg-4">
+    <a  class="thumbnail" onClick="onClickImageRadio('transmission_radio','transmission_dunno','transmission_img')" name="transmission_img">
+    
+ 								<img src="auto_icons/dunno_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Clueless</div>
+								<input type="radio" name="transmission_radio" id="transmission_dunno" class="auto-hidden-forms" value="dunno">
+  	
+    </a>
+                        </div>
+                        
+    					<div class="col-xs-6 col-md-4 col-lg-4">
+    <a  class="thumbnail" onClick="onClickImageRadio('transmission_radio','transmission_manual','transmission_img')" name="transmission_img">
+    
+ 								<img src="auto_icons/manual_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Manual</div>
+								<input type="radio" name="transmission_radio" id="transmission_manual" class="auto-hidden-forms" value="manual">
+  	
+    </a>
+                        </div>
+                        
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+    <a class="thumbnail" onClick="onClickImageRadio('transmission_radio','transmission_automatic','transmission_img')" name="transmission_img">
+    
+ 								<img src="auto_icons/automatic_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Automatic</div>
+								<input type="radio" name="transmission_radio" id="transmission_automatic" class="auto-hidden-forms" value="automatic">
+  	
+    </a>
+                        </div>
+  					</div><!--end of panel body-->
+				</div><!--end of panel-->
+        </div><!--end of column-->
+        <div class="col col-lg-6 col-sm-12 col-md-12">
+        	<div class="panel panel-primary">
+  				<div class="panel-heading">Usage </div>
+  					<div class="panel-body">
+    					<div class="col-xs-6 col-md-4 col-lg-4">
+    <a  class="thumbnail" onClick="onClickImageRadio('age_radio','age_dunno','age_img')" name="age_img">
+    
+ 								<img src="auto_icons/dunno_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Clueless</div>
+								<input type="radio" name="age_radio" id="age_dunno" class="auto-hidden-forms" value="any">
+  	
+    </a>
+                        </div>
+                        
+    					<div class="col-xs-6 col-md-4 col-lg-4">
+    <a class="thumbnail" onClick="onClickImageRadio('age_radio','age_new','age_img')" name="age_img">
+    
+ 								<img src="auto_icons/new_car_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Brand New</div>
+								<input type="radio" name="age_radio" id="age_new" class="auto-hidden-forms" value="new">
+  	
+    </a>
+                        </div>
+                        
+                        <div class="col-xs-6 col-md-4 col-lg-4">
+    <a  class="thumbnail" onClick="onClickImageRadio('age_radio','age_used','age_img')" name="age_img">
+    
+ 								<img src="auto_icons/used_car_icon.png" width="50" height="50">
+                                <div align="center" class="caption">Used</div>
+								<input type="radio" name="age_radio" id="age_used" class="auto-hidden-forms" value="used">
+  	
+    </a>
+                        </div>
+  					</div><!--end of panel body-->
+				</div><!--end of panel-->
+        </div><!--end of column-->
+	</div><!--end of row-->
+</div><!--end of container-->
+
+<div class="container"><!--Extension-->
+	<div class="row">
+		<div class="col col-lg-6 col-sm-12 col-md-12">
+        	<div class="panel panel-primary">
+  				<div class="panel-heading">Environment Friendly </div>
+  					<div class="panel-body">
+    					<input type="text" id="environment_range"/>
+                        <!--<div class="row">
+		<div class="col" style="position:absolute; width:15%; left:5%">
+        Any
+        </div>
+        <div  class="col" style="position:absolute; width:15%; left:25%">
+        Low
+        </div>
+        <div  class="col" style="position:absolute; width:20%; left:65%">
+        Medium
+        </div>
+        <div  class="col" style="position:absolute; width:20%; left:90%">
+        High
+        </div>
+        </div>-->
+  					</div><!--end of panel body-->
+				</div><!--end of panel-->
+        </div><!--end of column-->
+        <div class="col col-lg-6 col-sm-12 col-md-12">
+        	<div class="panel panel-primary">
+  				<div class="panel-heading">Something else  </div>
+  					<div class="panel-body">
+    					Something else
+  					</div><!--end of panel body-->
+				</div><!--end of panel-->
+        </div><!--end of column-->
+	</div><!--end of row-->
+</div><!--end of container-->
+
+<br><br>
+
+
+<!--Footer-->
+<footer class="site-footer">
+	<div class="container">
+		<div class="row">
+				<div class="col-sm-offset-3 col-xs-offset-3 col-md-offset-3 col-lg-offset-5 col-sm-2">
+					<a class="btn btn-primary btn-md" href="auto_results.html" role="button" onClick="getAllInputsFromQuestion()">201,344 cars</a>	
+				</div>
+			</div>
+    </div>
+</footer>
+<!--/Footer-->
+<!--end of first questions-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="boxes.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#environment_range").ionRangeSlider({
+        grid: true, 
+		from: 0,
+    	values: [
+        "Any","Low", "Medium", "High"
+    ]
+        });
+		var updateSliderScale;
+$(window).resize(function(){
+    clearTimeout(updateSliderScale);
+    updateSliderScale = setTimeout(function(){
+        $("#environment_range").ionRangeSlider('update');
+    }, 100);
+});
+	});
+	</script>
+</body>
+</html>
