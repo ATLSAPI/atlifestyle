@@ -1,0 +1,6 @@
+Options -Indexes
+
+<FilesMatch "^\.htaccess">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

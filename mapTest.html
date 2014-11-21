@@ -1,0 +1,46 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<textarea id="txtAddress" rows="3" cols="25"></textarea>
+<br />
+<div id="demo"></div>
+<input type="button" onclick="gtLocation()" value="Get Location" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+
+    function GetLocation() {
+        var geocoder = new google.maps.Geocoder();
+        var address = document.getElementById("txtAddress").value;
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng();
+                alert("Latitude: " + latitude + "\nLongitude: " + longitude);
+            } else {
+                alert("Request failed.")
+            }
+        });
+    };
+
+
+    var x = document.getElementById("demo");
+    function gtLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        var coords = new google.maps.Geocoder();
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+    //-->
+</script>
+</body>
+</html>
