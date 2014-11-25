@@ -1,0 +1,227 @@
+<br>
+<form>
+<div class="container-fliud">
+
+  <div class="row">
+    <div class="col col-lg-6 col-sm-12 col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Budget is about </div>
+        <div class="panel-body " ng-click="getCount()">
+          <input type="text" id="budget_range"/>
+          <!--<div style="width: 100%"><div style="position: absolute; width: 20%">1</div><div style="position: absolute; width: 20%; left:20%; text-align: center">2</div></div>
+          <br><input type="range" ng-model="text" max="50000" min="10000" step="10000" ng-change="getCount()">
+          <input type="hidden" value="{{text}}">-->
+        </div><!--end of panel body-->
+      </div><!--end of panel-->
+    </div><!--end of column-->
+
+    <div class="col col-lg-6 col-sm-12 col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Running Cost is about </div>
+        <div class="panel-body">
+          <input type="hidden" id="running_cost_range">
+        </div><!--end of panel body-->
+      </div><!--end of panel-->
+    </div><!--end of column-->
+  </div><!--end of row-->
+
+  <div class="row">
+    <div class="col col-lg-6 col-sm-12 col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading"> I would take </div>
+        <div class="panel-body">
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('taking_radio','taking_gardening','taking_img')" name="taking_img">
+
+              <img src="images/gardening_icon.png" width="50" height="50">
+              <div align="center" class="caption">Tools</div>
+              <input type="radio" name="taking_radio" id="taking_gardening" class="auto-hidden-forms" value="garden_tools">
+
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('taking_radio','taking_push_chair','taking_img')" name="taking_img">
+
+              <img src="images/push_chair_icon.png" width="50" height="50">
+              <div align="center" class="caption">Push Chair</div>
+              <input type="radio" name="taking_radio" id="taking_push_chair" class="auto-hidden-forms" value="pushing_chair">
+
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('taking_radio','taking_dog','taking_img')" name="taking_img">
+
+              <img src="images/dog_icon.png" width="50" height="50">
+              <div align="center" class="caption">Pet</div>
+              <input type="radio" name="taking_radio" id="taking_dog" class="auto-hidden-forms" value="dog">
+
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('taking_radio','taking_golf_sticks','taking_img')" name="taking_img">
+
+              <img src="images/golf_sticks_icon.png" width="50" height="50">
+              <div align="center" class="caption">Sticks</div>
+              <input type="radio" name="taking_radio" id="taking_golf_sticks" class="auto-hidden-forms" value="golf_sticks">
+
+            </a>
+          </div>
+          <!--labels-->
+          <!--<div class="row no-margin no-padding">
+          <div class="col-xs-3 col-md-3 col-lg-3">
+          <div class="auto-icon-labels" align="center">Work</div>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3">
+          <div class="auto-icon-labels" align="center">Work</div>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3">
+          <div class="auto-icon-labels" align="center">Work</div>
+          </div>
+          <div class="col-xs-3 col-md-3 col-lg-3">
+          <div class="auto-icon-labels" align="center">Work</div>
+          </div>
+          </div>--><!--end of label-->
+        </div><!--end of panel body-->
+      </div><!--end of panel-->
+    </div><!--end of column-->
+    <div class="col col-lg-6 col-sm-12 col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Color </div>
+        <div class="panel-body">
+          <div class="col-xs-4 col-md-2 col-lg-2" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageCheck('color_check','color_white','color_img')" name="color_img" style="">
+
+              <img src="images/white_icon.png" style="width:100%; height:100%;">
+              <input type="checkbox" name="color_check" id="color_white" class="auto-hidden-forms" value="white">
+
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-md-2 col-lg-2" ng-click="getCount()">
+            <a class="thumbnail" ng-click="onClickImageCheck('color_check','color_black','color_img')" name="color_img" style="background-color:black">
+
+              <img src="images/black_icon.png" style="width:100%; height:100%;">
+              <input type="checkbox" name="color_check" id="color_black" class="auto-hidden-forms" value="black">
+
+            </a>
+          </div>
+          <div class="col-xs-4 col-md-2 col-lg-2" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageCheck('color_check','color_blue','color_img')" name="color_img" style="background-color:blue">
+
+              <img src="images/blue_icon.png" style="width:100%; height:100%;">
+              <input type="checkbox" name="color_check" id="color_blue" class="auto-hidden-forms" value="blue">
+
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-md-2 col-lg-2" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageCheck('color_check','color_red','color_img')" name="color_img" style="background-color:red">
+
+              <img src="images/red_icon.png" style="width:100%; height:100%;">
+              <input type="checkbox" name="color_check" id="color_red" class="auto-hidden-forms" value="red">
+
+            </a>
+          </div>
+          <div class="col-xs-4 col-md-2 col-lg-2" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageCheck('color_check','color_yellow','color_img')" name="color_img" style="background-color:yellow">
+
+              <img src="images/yellow_icon.gif.png" style="width:100%; height:100%;">
+              <input type="checkbox" name="color_check" id="color_yellow" class="auto-hidden-forms" value="yellow">
+            </a>
+          </div>
+
+          <div class="col-xs-4 col-md-2 col-lg-2" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageCheck('color_check','color_green','color_img')" name="color_img" style="background-color:green">
+
+              <img src="images/green_icon.png" style="width:100%; height:100%;">
+              <input type="check" name="color_check" id="color_green" class="auto-hidden-forms" value="green">
+
+            </a>
+          </div>
+
+        </div><!--end of panel body-->
+      </div><!--end of panel-->
+    </div><!--end of column-->
+  </div><!--end of row-->
+</div><!--end of container-->
+
+<div class="container-fliud">
+  <div class="row">
+    <div class="col col-lg-6 col-sm-12 col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">I wanna go </div>
+        <div class="panel-body">
+          <input type="text" id="speed_range" ondrag="getCount()"/>
+        </div><!--end of panel body-->
+      </div><!--end of panel-->
+    </div><!--end of column-->
+
+    <div class="col col-lg-6 col-sm-12 col-md-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Am carrying </div>
+        <div class="panel-body">
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('carrying_radio','carrying_one','carrying_img')" name="carrying_img">
+
+              <img src="images/one_people.png" width="50" height="50">
+              <div align="center" class="caption">One</div>
+              <input type="radio" name="carrying_radio" id="carrying_one" class="auto-hidden-forms" value="one">
+
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('carrying_radio','carrying_two','carrying_img')" name="carrying_img">
+
+              <img src="images/three_people.png" width="50" height="50">
+              <div align="center" class="caption">Three</div>
+              <input type="radio" name="carrying_radio" id="carrying_two" class="auto-hidden-forms" value="three">
+
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a  class="thumbnail" ng-click="onClickImageRadio('carrying_radio','carrying_three','carrying_img')" name="carrying_img">
+
+              <img src="images/five_people.png" width="50" height="50">
+              <div align="center" class="caption">Five</div>
+              <input type="radio" name="carrying_radio" id="carrying_three" class="auto-hidden-forms" value="five">
+
+            </a>
+          </div>
+
+          <div class="col-xs-6 col-md-3 col-lg-3" ng-click="getCount()">
+            <a class="thumbnail" ng-click="onClickImageRadio('carrying_radio','carrying_four','carrying_img')" name="carrying_img">
+
+              <img src="images/seven_people.png" width="50" height="50" >
+              <div align="center" class="caption">Seven</div>
+              <input type="radio" name="carrying_radio" id="carrying_four" class="auto-hidden-forms" value="seven">
+
+            </a>
+          </div>
+        </div><!--end of panel body-->
+      </div><!--end of panel-->
+    </div><!--end of column-->
+  </div><!--end of row-->
+
+
+</div><!--end of container-->
+  <!--Footer-->
+  <footer class="site-footer navbar-default">
+    <div class="container-fliud">
+      <div class="row">
+        <div>
+          <span class="auto-footer-text" style="text-align: center" >{{carCount}} Cars Found</span>
+          <a class="btn btn-primary btn-md  pull-right auto-footer-btn" role="button" ng-click="sendData()">Show me the Cars</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/Footer-->
+</form>
+<script src="scripts/ion.rangeSlider.min.js"></script>
+<script src="scripts/slider.js"></script>
+<br><br>
+
